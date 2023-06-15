@@ -1,6 +1,7 @@
 package com.jesper.seckill.service;
 
 import com.jesper.seckill.bean.SeckillGoods;
+import com.jesper.seckill.bean.User;
 import com.jesper.seckill.exception.GlobalException;
 import com.jesper.seckill.mapper.GoodsMapper;
 import com.jesper.seckill.result.CodeMsg;

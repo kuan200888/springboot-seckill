@@ -35,8 +35,7 @@ public class Result<T> {
 			this.msg = codeMsg.getMsg();
 		}
 	}
-	
-	
+
 	public int getCode() {
 		return code;
 	}

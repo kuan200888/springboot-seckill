@@ -26,7 +26,10 @@ public class OrderService {
     RedisService redisService;
 
     public SeckillOrder getOrderByUserIdGoodsId(long userId, long goodsId) {
-        return redisService.get(OrderKey.getSeckillOrderByUidGid, "" + userId + "_" + goodsId, SeckillOrder.class);
+        SeckillOrder seckillOrder = new SeckillOrder();
+        seckillOrder = redisService.get(OrderKey.getSeckillOrderByUidGid, "" + userId + "_" + goodsId, SeckillOrder.class);
+        if(seckillOrder != null) return seckillOrder;
+        else return orderMapper.getOrderByUserIdGoodsId(userId, goodsId);
     }
 
     public OrderInfo getOrderById(long orderId) {
